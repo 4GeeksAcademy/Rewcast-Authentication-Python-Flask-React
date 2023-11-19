@@ -108,7 +108,7 @@ class Species(db.Model):
     classification = db.Column(db.String(50), unique=False, nullable=False)
     designation = db.Column(db.String(50), unique=False, nullable=False)
     average_height = db.Column(db.Integer, unique=False, nullable=False)
-    average_lifespan = db.Column(db.Integer(50), unique=False, nullable=False)
+    average_lifespan = db.Column(db.Integer, unique=False, nullable=False)
     hair_colors = db.Column(db.String(50), unique=False, nullable=False)
     skin_colors = db.Column(db.String(50), unique=False, nullable=False)
     eye_colors = db.Column(db.String(50), unique=False, nullable=False)

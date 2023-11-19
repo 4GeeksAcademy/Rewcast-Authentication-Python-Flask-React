@@ -5,7 +5,7 @@
 	},
 	"version": "1.0.1",
 	"description": "",
-	"main": "index.js",
+	"main": "Main.jsx",
 	"scripts": {
 		"start": "webpack-dev-server --config webpack.dev.js --port 3000",
 		"build": "webpack --config webpack.prod.js"
@@ -74,8 +74,9 @@
 	},
 	"dependencies": {
 		"prop-types": "^15.6.1",
-		"react": "^16.8.4",
-		"react-dom": "^16.8.4",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-hot-toast": "^2.4.1",
 		"react-polyfills": "0.0.1",
 		"react-router-dom": "^6.3.0"
 	}
