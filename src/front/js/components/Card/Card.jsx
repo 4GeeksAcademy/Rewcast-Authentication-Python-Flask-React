@@ -6,6 +6,7 @@ import useAppContext from "../../contexts/AppContext.jsx";
 import PeopleDetails from "./components/PeopleDetails.jsx";
 import PlanetsDetails from "./components/PlanetsDetails.jsx";
 import StarshipsDetails from "./components/StarshipDetails.jsx";
+import SpeciesDetails from "./components/SpeciesDetails.jsx";
 
 const Card = ({
   uid,
@@ -30,6 +31,11 @@ const Card = ({
     );
   }
   if (resourceType === "planets") {
+    isFavorite = Array.isArray(favorites) && favorites.some(
+      (item) => item.planet_id === Number(uid)
+    );
+  }
+  if (resourceType === "species") {
     isFavorite = Array.isArray(favorites) && favorites.some(
       (item) => item.planet_id === Number(uid)
     );
@@ -69,6 +75,18 @@ const Card = ({
           }}
         />
       )}
+      {resourceType === "species" && (
+        <img
+          src={`https://starwars-visualguide.com/assets/img/species/${uid}.jpg`}
+          className="card-img-top object-fit-cover"
+          style={{ minWidth: "17rem", height: 200 }}
+          alt={`specie ${name}`}
+          onError={({ currentTarget }) => {
+            currentTarget.onerror = null;
+            currentTarget.src = "https://starwars-visualguide.com/assets/img/categories/species.jpg"
+          }}
+        />
+      )}
       {resourceType === "starships" && (
         <img
           src={`https://starwars-visualguide.com/assets/img/starships/${uid}.jpg`}
@@ -88,6 +106,9 @@ const Card = ({
         )}
         {resourceType === "planets" && (
           <PlanetsDetails population={population} gravity={gravity} />
+        )}
+        {resourceType === "species" && (
+          <SpeciesDetails speciename={speciename} classification={classification} language={language} />
         )}
         {resourceType === "starships" && (
           <StarshipsDetails model={model} passengers={passengers} />

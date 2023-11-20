@@ -8,7 +8,7 @@ import classes from "./HomePage.module.css";
 const DetailPage = () => {
   const params = useParams();
   const { store } = useAppContext();
-  const { people, planets, starships, isLoading } = store;
+  const { people, planets, species, starships, isLoading } = store;
   const resourceType = params.resourceType;
   const uid = params.uid;
 
@@ -26,6 +26,10 @@ const DetailPage = () => {
     case "planets":
       targetResource = planets.find((planet) => planet.uid === uid);
       resourceImage = `https://starwars-visualguide.com/assets/img/planets/${uid}.jpg`;
+      break;
+    case "species":
+      targetResource = species.find((specie) => specie.uid === uid);
+      resourceImage = `https://starwars-visualguide.com/assets/img/species/${uid}.jpg`;
       break;
     case "starships":
       targetResource = starships.find((starship) => starship.uid === uid);

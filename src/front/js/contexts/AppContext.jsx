@@ -17,6 +17,7 @@ import React, {
   export const AppContextProvider = ({ children }) => {
 	const [people, peopleAreLoading] = useResources("people");
 	const [planets, planetsAreLoading] = useResources("planets");
+	const [species, speciesAreLoading] = useResources("species");
 	const [starships, starshipsAreLoading] = useResources("starships");
 	const [favorites, setFavorites] = useState([]);
 	const token = localStorage.getItem("token");
@@ -24,7 +25,7 @@ import React, {
 	const [authenticated, setAuthenticated] = useState(false);
   
 	const isLoading = useMemo(() => {
-	  return peopleAreLoading || planetsAreLoading || starshipsAreLoading;
+	  return peopleAreLoading || planetsAreLoading || speciesAreLoading || starshipsAreLoading;
 	}, [peopleAreLoading, planetsAreLoading, starshipsAreLoading]);
   
 	useEffect(() => {
@@ -112,7 +113,7 @@ import React, {
 		}
 		localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
 		setFavorites(updatedFavorites);
-		toast.success("This is the way", {
+		toast.success("Light is the way", {
 		  duration: 3000,
 		});
 	  } catch (error) {
@@ -133,6 +134,9 @@ import React, {
 		  }
 		  if (resourceType === "planets") {
 			return favorite.planet_id === Number(uid);
+		  }
+		  if (resourceType === "species") {
+			return favorite.specie_id === Number(uid);
 		  }
 		  if (resourceType === "starships") {
 			return favorite.starship_id === Number(uid);
@@ -163,6 +167,7 @@ import React, {
 	const store = {
 	  people,
 	  planets,
+	  species,
 	  starships,
 	  isLoading,
 	  favorites,

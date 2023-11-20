@@ -17,6 +17,7 @@ const HomePage = () => {
     <main className="container">
       <Section resourceType="people" target="people" title="Characters" />
       <Section resourceType="planets" target="planets" title="Planets" />
+      <Section resourceType="species" target="species" title="Species" />
       <Section resourceType="starships" target="starships" title="Starships" />
     </main>
   );

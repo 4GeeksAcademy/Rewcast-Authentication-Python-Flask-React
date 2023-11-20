@@ -40,7 +40,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-        favicon: '4geeks.ico',
+        favicon: 'public/star_wars_logo_PNG43.png',
         template: 'template.html'
     }),
     new Dotenv({ safe: true, systemvars: true })

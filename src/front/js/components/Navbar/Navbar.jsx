@@ -11,10 +11,10 @@ const Navbar = () => {
         <Link to="/">
           <span className="navbar-brand mx-5 my-3 h1">
             <img
-              src="https://lumiere-a.akamaihd.net/v1/images/sw_logo_stacked_2x-52b4f6d33087_7ef430af.png?region=0,0,586,254"
+              src="https://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG43.png"
               alt="logo"
-              width="120"
-              height="50"
+              width="25%"
+              height="25%"
             />
           </span>
         </Link>

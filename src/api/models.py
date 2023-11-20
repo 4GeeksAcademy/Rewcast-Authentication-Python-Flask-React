@@ -8,7 +8,7 @@ class User(db.Model):
     email = db.Column(db.String(50), unique=True, nullable=False)
     password = db.Column(db.String(50), unique=False, nullable=False)
     is_active = db.Column(db.Boolean(), unique=False, nullable=True, default=True)
-
+    
     def __repr__(self):
         return '<User %r>' % self.username
 
@@ -167,7 +167,7 @@ class Starships(db.Model):
             "crew": self.crew, 
             "passengers": self.passengers,
             "max_atmosphering_speed": self.max_atmosphering_speed,
-            "hyperdrive_ratin": self.hyperdrive_rating,
+            "hyperdrive_rating": self.hyperdrive_rating,
             "MGLT": self.MGLT,
             "cargo_capacity": self.cargo_capacity,
             "consumables": self.consumables

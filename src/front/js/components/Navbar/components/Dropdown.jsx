@@ -46,6 +46,12 @@ const Dropdown = () => {
                   name = fav.name;
                   resourceType = "planets";
                 }
+                if (el.specie_id != null) {
+                  uid = el.specie_id;
+                  fav = Array.from(species).find((item) => Number(item.uid) === uid);
+                  name = fav.name;
+                  resourceType = "species";
+                }
                 if (el.starship_id != null) {
                   uid = el.starship_id;
                   fav = Array.from(starships).find((item) => Number(item.uid) === uid);
