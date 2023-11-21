@@ -10,7 +10,7 @@ const Section = ({ title, resourceType }) => {
   const resources = store[resourceType];
 
   return (
-    <section className="my-5">
+    <section className="my-5 bg-opacity-10">
       <h2 className="mb-3 text-warning fw-bold">{title}</h2>
       <div className={classes.carousel}>
         {resources.map((item, index) => (

@@ -6,7 +6,7 @@ import Login from "./components/Login.jsx";
 
 const Navbar = () => {
   return (
-    <nav className="navbar bg-dark mb-3 sticky-top border-bottom border-dark-subtle">
+    <nav className="navbar bs-dark-border-subtle mb-3 sticky-top border-bottom">
       <div className="container-fluid">
         <Link to="/">
           <span className="navbar-brand mx-5 my-3 h1">

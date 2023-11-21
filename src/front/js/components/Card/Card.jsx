@@ -48,7 +48,7 @@ const Card = ({
   
   return (
     <div
-      className="card text-bg-dark border-light"
+      className="card border-warning border-opacity-25"
       style={{ minWidth: "18rem" }}
     >
       {resourceType === "people" && (

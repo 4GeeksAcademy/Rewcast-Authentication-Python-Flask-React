@@ -5,7 +5,7 @@ import React, {
 	useState,
 	useEffect,
   } from "react";
-  
+  import Loader from "../components/Loader";
   import useResources from "../hooks/useResources";
   import authService from "../services/authService";
   import authFavorites from "../services/authFavorites";

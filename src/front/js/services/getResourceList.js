@@ -1,5 +1,5 @@
 export const getResourceList = (resource) => {
-  return fetch(`https://automatic-garbanzo-ww4j66rrp7pcggw5-3001.app.github.dev/api/${resource}`)
+  return fetch(`https://fuzzy-space-train-gvvw99x5wv5hv4x4-3000.app.github.dev/api/${resource}`)
     .then((res) => {
       if (!res.ok) {
         throw Error("There was an error with the request");

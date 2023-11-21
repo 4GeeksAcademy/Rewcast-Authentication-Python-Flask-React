@@ -42,9 +42,9 @@ const SignupPage = () => {
     <div className="container vh-100 mt-5">
       <div className="row justify-content-center">
         <div className="col-md-6">
-          <div className="card">
+          <div className="card bg-dark bg-opacity-50">
             <div className="card-body">
-              <h2 className="card-title text-center my-5">Sign Up</h2>
+              <h2 className="card-title text-center text-info my-5">Sign Up</h2>
               <form onSubmit={handleSubmit}>
                 <div className="mb-5">
                   <input
@@ -75,7 +75,7 @@ const SignupPage = () => {
                 </div>
                 <div className="form-check mb-5">
                   <div>
-                    <label className="form-check-label" htmlFor="flexCheckDefault">
+                    <label className="form-check-label text-white" htmlFor="flexCheckDefault">
                       <input
                         className="form-check-input"
                         type="checkbox"
@@ -90,7 +90,7 @@ const SignupPage = () => {
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="btn btn-warning w-60 fw-bold px-5 py-2"
+                    className="btn btn-info w-60 fw-bold px-5 py-2"
                   >
                     SIGN UP
                   </button>
@@ -99,10 +99,10 @@ const SignupPage = () => {
 
               <div className="my-4 text-center">
                 <div>
-                  <span>Already have an account? </span>
+                  <span className="text-white">Already have an account? </span>
                   <Link
                     to="/login"
-                    className="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover fw-bold"
+                    className="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover fw-bold"
                   >
                     Log In
                   </Link>

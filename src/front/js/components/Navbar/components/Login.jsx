@@ -16,10 +16,10 @@ const Login = () => {
           className="btn btn-dark fw-bold me-3 my-3 text-warning"
           onClick={logout}
         >
-          <i className="fa-regular fa-user pe-2"></i>LOGOUT
+          <i class="fa-brands fa-sith"></i>LOGOUT
         </button>
       ) : (
-        <Link to="/login" className="btn btn-dark fw-bold me-3 my-3">
+        <Link to="/login" className="btn btn-warning fw-bold me-3 my-3">
           <i class="fa-solid fa-jedi"></i> LOGIN
         </Link>
       )}

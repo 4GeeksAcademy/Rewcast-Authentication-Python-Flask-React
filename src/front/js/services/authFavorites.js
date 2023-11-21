@@ -1,4 +1,4 @@
-const BASE_URL = "https://automatic-garbanzo-ww4j66rrp7pcggw5-3001.app.github.dev/api";
+const BASE_URL = "https://fuzzy-space-train-gvvw99x5wv5hv4x4-3000.app.github.dev/api";
 
 const addFavoriteToAPI = (resource_id, resource_type, user_id) => {
   return fetch(`${BASE_URL}/user/${user_id}/favorites`, {

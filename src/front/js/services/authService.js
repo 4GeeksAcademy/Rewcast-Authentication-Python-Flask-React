@@ -1,5 +1,5 @@
 const signup = (email, password) => {
-    return fetch("https://automatic-garbanzo-ww4j66rrp7pcggw5-3001.app.github.dev/api/signup/", {
+    return fetch("https://fuzzy-space-train-gvvw99x5wv5hv4x4-3000.app.github.dev/api/signup/", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -19,7 +19,7 @@ const signup = (email, password) => {
   };
 
   const login = (email, password) => {
-    return fetch("https://automatic-garbanzo-ww4j66rrp7pcggw5-3001.app.github.dev/api/login/", {
+    return fetch("https://fuzzy-space-train-gvvw99x5wv5hv4x4-3000.app.github.dev/api/login/", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

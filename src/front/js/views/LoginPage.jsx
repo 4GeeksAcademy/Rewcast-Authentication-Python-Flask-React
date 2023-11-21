@@ -22,10 +22,10 @@ const LoginPage = () => {
   return (
     <div className="container vh-100 mt-5">
       <div className="row justify-content-center">
-        <div className="col-md-6">
-          <div className="card">
+        <div className="col-md-6 bg-in">
+          <div className="card bg-dark bg-opacity-50">
             <div className="card-body">
-            <h2 className="card-title text-center my-5">Login</h2>
+            <h2 className="card-title text-center my-5 text-info">Login</h2>
             <form onSubmit={handleSubmit}>
                 <div className="mb-5">
                   <input
@@ -57,7 +57,7 @@ const LoginPage = () => {
                   </div>
                 </div>
                 <div className="form-check mb-5">
-                    <label className="form-check-label" htmlFor="flexCheckDefault">
+                    <label className="form-check-label text-white" htmlFor="flexCheckDefault">
                       <input
                         className="form-check-input"
                         type="checkbox"
@@ -71,7 +71,7 @@ const LoginPage = () => {
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="btn btn-warning w-60 fw-bold px-5 py-2"
+                    className="btn btn-info w-60 fw-bold px-5 py-2"
                   >
                     SIGN IN
                   </button>
@@ -79,10 +79,10 @@ const LoginPage = () => {
               </form>
               <div className="my-4 text-center">
                 <div>
-                  <span>Don't have an account? </span>
+                  <span className="text-white">Don't have an account? </span>
                   <Link
                     to="/signup"
-                    className="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover fw-bold"
+                    className="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover fw-bold"
                   >
                     Sign up
                   </Link>
