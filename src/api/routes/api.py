@@ -5,8 +5,14 @@ from flask import Flask, request, jsonify, url_for, Blueprint
 from api.models import db, User, Characters, Planets, Species, Starships, Favorites
 from api.utils import generate_sitemap, APIException
 from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required
+from api.routes.users_routes import users
+from api.routes.auth_routes import auth
 
 api = Blueprint('api', __name__)
+
+api.register_blueprint(users, url_prefix='/users')
+api.register_blueprint(auth, url_prefix='/auth')
+
 
 #Ruta para creación de token
 @api.route('/token', methods=['POST'])
@@ -63,6 +69,7 @@ def delete_user(user_id):
 @api.route('/login', methods=['POST'])
 def login_user():
     data = request.get_json()
+    username = data.
     email = data.get('email')
     password = data.get('password')
     user = User.query.filter_by(email=email).first()
@@ -73,11 +80,13 @@ def login_user():
 
 
 #Ruta para registrar nuevo usuario
-@api.route('/signup', methods=['POST'])
+@app.route('/signup', methods=['POST'])
 def create_user():
     data = request.get_json()
+    username = data.get('username')
     email = data.get('email')
     password = data.get('password')
+
     existing_user = User.query.filter_by(email=email).first()
     if existing_user:
         return jsonify({'message':'User already exists'}), 400
